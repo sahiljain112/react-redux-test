@@ -1,18 +1,29 @@
-// Action types
-export const TASK1 = 'SAMPLE_TASK1';
-export const TASK2 = 'SAMPLE_TASK2';
+export const ADD_TODO = 'ADD_TODO';
+export const TOGGLE_TODO = 'TOGGLE_TODO';
+export const DELETE_TODO = 'DELETE_TODO';
 
-// Action creators
-export const action1 = () => {
-  return {
-    type: TASK1,
-    text: 'This is sample task 1'
-  }
-}
+export const visibilityFilters = {
+  SHOW_ALL: 'SHOW_ALL',
+  SHOW_COMPLETED: 'SHOW_COMPLETED',
+};
 
-export const action2 = () => {
+export const addTodo = (text) => {
   return {
-    type: TASK2,
-    text: 'This is sample task 2'
-  }
-}
+    type: ADD_TODO,
+    text,
+  };
+};
+
+export const toggleTodo = (text) => {
+  return {
+    type: TOGGLE_TODO,
+    text,
+  };
+};
+
+export const deleteTodo = (text) => {
+  return {
+    type: DELETE_TODO,
+    text,
+  };
+};
